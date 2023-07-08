@@ -1,5 +1,4 @@
 import torch.nn as nn
-
 #utils
 
 class TrainDetectionPhase(nn.Module):
