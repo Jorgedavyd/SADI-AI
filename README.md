@@ -1,10 +1,12 @@
-# SADI A.I. ()
+# SecureGuard
 
-This is a base program for A.I. powered security systems.
+A.I. powered security systems could lead us to a safer world. Real-Time face detection, threat detection, face recognition, and individual detection are some main functionalities of this system.
 
 ## Functionalities
 
 ### Pretrained:
+
+You can find them [here](https://drive.google.com/drive/folders/1EdmfK3JjSvHDUrUI86Y07vaK1PPZBa9n)
 
 #### Person detection:
 
