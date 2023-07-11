@@ -1,3 +1,5 @@
+#creating dataset from camera utilities
+
 import cv2
 import os
 
@@ -115,15 +117,15 @@ def test_data():
     cap.release()
 
 
-
-while True:
-    a = int(input('1. train\n2. val\n 3.test\ninput:'))
-    if a == 1:
-        train_data()
-    elif a == 2:
-        val_data()
-    elif a == 3:
-        test_data()
-    else:
-        print('Try again\n\n\n\n')
-        continue
+def from_camera():
+    while True:
+        a = int(input('1. train\n2. val\n 3.test\ninput:'))
+        if a == 1:
+            train_data()
+        elif a == 2:
+            val_data()
+        elif a == 3:
+            test_data()
+        else:
+            print('Try again\n\n\n\n')
+            continue
