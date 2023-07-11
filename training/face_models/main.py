@@ -13,7 +13,7 @@ def dataset():
         else:
             continue
 
-def get_labels():
+def YAML_config():
     file = os.listdir('data')
     #Number of classes
     nc = str(len(file))
@@ -36,4 +36,10 @@ def get_labels():
             f'names: {output}'
         ])
 
-        
+def main():
+    dataset()
+    YAML_config()
+    train()
+
+if __name__ == '__main__':
+    main()

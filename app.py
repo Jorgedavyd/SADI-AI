@@ -1,7 +1,5 @@
 #app
 import cv2
-import tensorflow as tf
-import numpy as np
 from ultralytics import YOLO
 
 #You have to download the pretrained or train on your own with all the utils of this repository.

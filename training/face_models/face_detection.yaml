@@ -1,5 +1,5 @@
-path: #Insert the root path (example: /Users/dark/Desktop/gun_dataset, in this directory should be the images and labels folders)
+path: ./YOLO_data_utils/data
 train: images/train
 val: images/val
-nc: # insert number of classes
-names: ## Insert labels
+nc: 
+names: 

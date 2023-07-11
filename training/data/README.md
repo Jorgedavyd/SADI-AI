@@ -2,7 +2,7 @@
 
 1. Threat detection: [Youtube-GDD](https://github.com/UCAS-GYX/YouTube-GDD/tree/main), [Gun detection dataset](https://drive.google.com/drive/folders/179q_MNjx0ipzybhdjpQTxVu3IbI-5lWl)
 2. Person and threat detection: [Youtube-GDD](https://github.com/UCAS-GYX/YouTube-GDD/tree/main)
-3. Person detection: [MPII Human Pose](http://human-pose.mpi-inf.mpg.de/#download)
+3. Person detection: No data, default model.
 4. Face recognition: Creates dataset based on photos of the class.
 
 ## Preprocessing
