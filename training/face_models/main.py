@@ -5,40 +5,52 @@ import os
 
 def dataset():
     while True:
-        ask = int(input('Which way do you want to create your dataset:\n1. From camera.\n2. From loaded folders.\n==================>(1,2)'))
+        ask = int(input('Which way do you want to create your dataset:\n1. From folder.\n2. From camera.\n==================>(1,2): '))
         if ask == 1:
-            from_camera()
-        elif ask ==2:
             from_folder()
+            return ask-1
+            break
+        elif ask ==2:
+            class_list = from_camera()
+            return [ask-1, class_list]
+            break
         else:
             continue
 
-def YAML_config():
-    file = os.listdir('data')
-    #Number of classes
-    nc = str(len(file))
+def YAML_config(*args):
+    if args[0]:
+        output = ''
+        for classes in args[1]:
+            output = output + '"' + classes + '",'
+        
+        output = f'[{output[:-1]}]'
+        nc = str(len(args[1]))
+    else:
+        file = os.listdir('data')
+        #Number of classes
+        nc = str(len(file))
 
-    #classes
-    output = ''
+        #classes
+        output = ''
 
-    for classes in file:
-        output = output + '"' + classes + '",'
-    output = f'[{output[:-1]}]'
+        for classes in file:
+            output = output + '"' + classes + '",'
+        output = f'[{output[:-1]}]'
     #path to data
-    path = os.path.join(os.getcwd(), 'data')
+    path = os.path.join(os.getcwd(), 'YOLO')
     #insert into yaml config
     with open('face_detection.yaml', 'w') as yaml:
         yaml.writelines([
-            f'path: {path}',
-            'train: images/train',
-            'val: images/val',
-            f'nc: {nc}',
+            f'path: {path}\n',
+            'train: images/train\n',
+            'val: images/val\n',
+            f'nc: {nc}\n',
             f'names: {output}'
         ])
 
 def main():
-    dataset()
-    YAML_config()
+    mode = dataset()
+    YAML_config(*mode)
     train()
 
 if __name__ == '__main__':

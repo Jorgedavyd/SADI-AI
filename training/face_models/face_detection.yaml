@@ -1,5 +1,0 @@
-path: ./YOLO_data_utils/data
-train: images/train
-val: images/val
-nc: 
-names: 

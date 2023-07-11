@@ -1,4 +1,4 @@
 ultralytics
 PIL
 os
-opencv-python
+opencv-python (if it is not working, uninstall and install the same distribution)

@@ -1,5 +1,4 @@
 #app
-import cv2
 from ultralytics import YOLO
 
 #You have to download the pretrained or train on your own with all the utils of this repository.

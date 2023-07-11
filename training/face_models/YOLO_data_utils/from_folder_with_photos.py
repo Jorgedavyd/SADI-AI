@@ -2,13 +2,14 @@
 
 import os
 import cv2
+
 def from_folder():
     try:
-        os.makedirs('images/train')
-        os.makedirs('images/val')
-        os.makedirs('images/test')
-        os.makedirs('labels/train')
-        os.makedirs('labels/val')
+        os.makedirs('YOLO/images/train')
+        os.makedirs('YOLO/images/val')
+        os.makedirs('YOLO/images/test')
+        os.makedirs('YOLO/labels/train')
+        os.makedirs('YOLO/labels/val')
     except FileExistsError:
         pass
 
@@ -22,8 +23,8 @@ def from_folder():
                 img_name = file[:-4]
                 image = cv2.imread(os.path.join('data', class_name, file))
                 faces = facedetect.detectMultiScale(image,1.3, 5)
-                cv2.imwrite(os.path.join('images/train', file), image)
-                with open('labels/train/' + img_name + '.txt', 'w') as file:
+                cv2.imwrite(os.path.join('YOLO/images/train', file), image)
+                with open('YOLO/labels/train/' + img_name + '.txt', 'w') as file:
                     for x,y,w,h in faces:    
                         file.write(f'{class_num} {x} {y} {w} {h}\n')
                 file.close()
@@ -31,8 +32,8 @@ def from_folder():
                 img_name = file[:-4]
                 image = cv2.imread(os.path.join('data', class_name, file))
                 faces = facedetect.detectMultiScale(image,1.3, 5)
-                cv2.imwrite(os.path.join('images/val', file), image)
-                with open('labels/val/' + img_name + '.txt', 'w') as file:
+                cv2.imwrite(os.path.join('YOLO/images/val', file), image)
+                with open('YOLO/labels/val/' + img_name + '.txt', 'w') as file:
                     for x,y,w,h in faces:    
                         file.write(f'{class_num} {x} {y} {w} {h}\n')
                 file.close()
