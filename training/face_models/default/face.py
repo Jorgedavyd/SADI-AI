@@ -1,7 +1,12 @@
 import cv2
-
+#Setting up the camera
 cap = cv2.VideoCapture(0)
 
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320) # insert the width at which the model was trained 
+
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 320)# insert the height at which the model was trained (usually same as width) 
+
+cap.set(cv2.CAP_PROP_FPS, 30) # Y
 
 human_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 

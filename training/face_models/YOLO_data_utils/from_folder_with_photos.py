@@ -24,8 +24,13 @@ def from_folder():
                 image = cv2.imread(os.path.join('data', class_name, file))
                 faces = facedetect.detectMultiScale(image,1.3, 5)
                 cv2.imwrite(os.path.join('YOLO/images/train', file), image)
+                H,W,_ = image.shape
                 with open('YOLO/labels/train/' + img_name + '.txt', 'w') as file:
-                    for x,y,w,h in faces:    
+                    for x,y,w,h in faces: 
+                        x = x/W
+                        y = y/H
+                        w = w/W
+                        h= h/H
                         file.write(f'{class_num} {x} {y} {w} {h}\n')
                 file.close()
             else:
@@ -33,8 +38,13 @@ def from_folder():
                 image = cv2.imread(os.path.join('data', class_name, file))
                 faces = facedetect.detectMultiScale(image,1.3, 5)
                 cv2.imwrite(os.path.join('YOLO/images/val', file), image)
+                H,W,_ = image.shape
                 with open('YOLO/labels/val/' + img_name + '.txt', 'w') as file:
-                    for x,y,w,h in faces:    
+                    for x,y,w,h in faces:  
+                        x = x/W
+                        y = y/H
+                        w = w/W
+                        h= h/H
                         file.write(f'{class_num} {x} {y} {w} {h}\n')
                 file.close()
         

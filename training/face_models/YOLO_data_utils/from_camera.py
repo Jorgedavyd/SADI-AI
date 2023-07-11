@@ -23,8 +23,13 @@ def WriteLabel(frameNr, classes, frame, train=True):
     else:        
         path = 'YOLO/labels/val/'
     faces = facedetect.detectMultiScale(frame,1.3, 5)
+    H,W,_ = frame.shape
     with open(path + frameNr + '.txt', 'w') as file:
-        for x,y,w,h in faces:    
+        for x,y,w,h in faces:
+            x = x/W
+            y = y/H
+            w = w/W
+            h= h/H
             file.write(f'{classes} {x} {y} {w} {h}\n')
     file.close()
 
