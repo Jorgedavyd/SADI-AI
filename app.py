@@ -14,7 +14,7 @@ while cap.isOpened():
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     resized = tf.image.resize(rgb, (120,120))
     
-    #yhat = facetracker.predict(np.expand_dims(resized/255,0)) #Face detection
+    yhat = facetracker.predict(np.expand_dims(resized/255,0)) #Face detection
     #yhat = facetracker.predict(np.expand_dims(resized/255,0)) #Threat detection
     #yhat = facetracker.predict(np.expand_dims(resized/255,0)) #Person and threat detection
     #yhat = facetracker.predict(np.expand_dims(resized/255,0)) #Person detection
