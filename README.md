@@ -1,4 +1,4 @@
-# SecureGuard
+# SADI A.I.
 
 A.I. powered security systems could lead us to a safer world. Real-Time face detection, threat detection, face recognition, and individual detection are some main functionalities of this system.
 
