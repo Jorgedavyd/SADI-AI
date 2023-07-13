@@ -1,4 +1,4 @@
-# SecureGuard
+# SADI A.I.
 
 A.I. powered security systems could lead us to a safer world. Real-Time face detection, threat detection, face recognition, and individual detection are some main functionalities of this system.
 
@@ -26,7 +26,7 @@ has been made for person tracking.
 threat_detection.pt
 ```
 
-has been made for person tracking.
+has been made for threat tracking.
 
 #### Person and threat detection:
 
@@ -36,7 +36,7 @@ has been made for person tracking.
 person_and_threat_detection.pt
 ```
 
-has been made for person tracking.
+has been made for person and threat tracking.
 
 ### To train
 
@@ -72,4 +72,4 @@ The process is detailed on the README.md inside data folder.
 
 4. Move the `best.pt` model from the training session you accomplished and send it to the `/models/` folder.
 
-5. Now you can access to the model and save it on `/models/` directory, there is a preview executing app.py
+5. Now you can access to the model and save it on `/models/` directory, there is a preview executing `app.py`
