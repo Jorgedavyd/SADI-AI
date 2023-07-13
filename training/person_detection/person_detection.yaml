@@ -1,4 +1,4 @@
-path: #Insert the root path to the dataset (example: /Users/dark/Desktop/gun_dataset, in this directory should be the images and labels folders)
+path: ./dataset/
 train: images/train
 val: images/val
 nc: 1
