@@ -6,7 +6,7 @@ A.I. powered security systems could lead us to a safer world. Real-Time face det
 
 ### Pretrained:
 
-You can find them [here](https://drive.google.com/drive/folders/1EdmfK3JjSvHDUrUI86Y07vaK1PPZBa9n)
+You can find them [here](https://drive.google.com/drive/u/1/folders/1S-LVrZYJnvE6kyAmZD0TXXXVHlIOJu1P)
 
 #### Person detection:
 

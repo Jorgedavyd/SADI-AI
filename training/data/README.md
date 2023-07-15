@@ -2,7 +2,7 @@
 
 1. Threat detection: [Youtube-GDD](https://github.com/UCAS-GYX/YouTube-GDD/tree/main), [Gun detection dataset](https://drive.google.com/drive/folders/179q_MNjx0ipzybhdjpQTxVu3IbI-5lWl)
 2. Person and threat detection: [Youtube-GDD](https://github.com/UCAS-GYX/YouTube-GDD/tree/main)
-3. Person detection: No data, default model.
+3. Person detection: [MS COCO](https://cocodataset.org/#download)
 4. Face recognition: Creates dataset based on photos of the class.
 
 ## Preprocessing
@@ -28,11 +28,7 @@
 
 [Gun detection dataset](https://drive.google.com/drive/folders/179q_MNjx0ipzybhdjpQTxVu3IbI-5lWl) is not preprocessed for YOLO format, the preprocessing notebook is already on the drive. This is the default preprocessing from the drive, but you'll need to change some parameters if you want to use it, as I did.
 
-### MPII Human Pose
-
-[MPII Human Pose](http://human-pose.mpi-inf.mpg.de/#download) is not preprocessed for YOLO format, so I let you the preprocessing methods in this directory.
-
-If you are locally executing, you should download the preprocessed dataset in this directory if you want to train the model on different parameters.
+### Person
 
 ### Face recognition dataset
 
@@ -62,4 +58,28 @@ THE BIGGER THE DATASET, THE BETTER RESULTS.
 
 # NOTE:
 
-The preprocessed datasets can be found [here](SIKEEEE)
+These datasets are already preprocessed:
+
+Youtube-GDD
+
+Gun Detection Dataset
+
+access [here](https://drive.google.com/drive/folders/1S-LVrZYJnvE6kyAmZD0TXXXVHlIOJu1P)
+
+To preprocess the person detection dataset, you have to run `dataset.py` from the respective folder. Then move the train data and validation data from `C:\\Users\\{user}\\fiftyone\\coco-2017\\` to the respective image folders from the current directory `/person_detection/YOLO_data/images/` and sort them in the corresponding folders. Your folder path would look:
+
+                person_detection
+                        default
+                        YOLO_data
+                                images
+                                        train
+                                                (here you have to move the images from train data)
+                                        val
+                                                (here you have to move the images from validation data)
+                                        test
+                                labels
+                                        train
+                                        val
+                        dataset.py
+                        person_detection_model.py
+                        person_detection.yaml
